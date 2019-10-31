@@ -41,6 +41,30 @@ app.post('/auth', function(request, response) {
 		response.end();
 	}
 });
+app.get('/about', (req, res) => {
+    res.sendFile('about.html', {
+        root: path.join(__dirname, './')})
+})
+app.get('/library', (req, res) => {
+    res.sendFile('library.html', {
+        root: path.join(__dirname, './')})
+})
+app.get('/design', (req, res) => {
+    res.sendFile('design.html', {
+        root: path.join(__dirname, './')})
+})
+app.get('/contact', (req, res) => {
+    res.sendFile('contact.html', {
+        root: path.join(__dirname, './')})
+})
+app.get('/about', (req, res) => {
+    res.sendFile('login.html', {
+        root: path.join(__dirname, './')})
+})
+app.get('/about', (req, res) => {
+    res.sendFile('register.html', {
+        root: path.join(__dirname, './')})
+})
 
 app.get('/home', function(request, response) {
 	if (request.session.loggedin) {
