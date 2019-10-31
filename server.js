@@ -67,11 +67,11 @@ app.get('/software', (req, res) => {
     res.sendFile('software.html', {
 		root: path.join(__dirname, './')})
 })		
-app.get('/about', (req, res) => {
+app.get('/login', (req, res) => {
     res.sendFile('login.html', {
         root: path.join(__dirname, './')})
 })
-app.get('/about', (req, res) => {
+app.get('/register', (req, res) => {
     res.sendFile('register.html', {
         root: path.join(__dirname, './')})
 })
