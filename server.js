@@ -12,7 +12,12 @@ var connection = mysql.createConnection({
 	password : '',
 	database : 'nodelogin'
 });
-app.get('/', function(request, response) {
+
+app.get('/', (req, res) => {
+    res.sendFile('home.html', {
+        root: path.join(__dirname, './')})
+})
+app.get('/login', function(request, response) {
 	response.sendFile(path.join(__dirname + '/login.html'));
 });
 app.use(session({
@@ -55,8 +60,13 @@ app.get('/design', (req, res) => {
 })
 app.get('/contact', (req, res) => {
     res.sendFile('contact.html', {
-        root: path.join(__dirname, './')})
+		root: path.join(__dirname, './')})
 })
+
+app.get('/software', (req, res) => {
+    res.sendFile('software.html', {
+		root: path.join(__dirname, './')})
+})		
 app.get('/about', (req, res) => {
     res.sendFile('login.html', {
         root: path.join(__dirname, './')})
