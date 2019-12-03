@@ -1,0 +1,85 @@
+<style> body {background-image: url("https://www.suspensiondesigner.com/wp-content/uploads/2018/12/background_cropped.jpeg")}</style>
+<style>
+.form-group {
+	width: 300px;
+	margin: 0 auto;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+.item h1 {
+	text-align: center;
+	color: #d8d8d8;
+	font-size: 24px;
+	padding: 20px 0 20px 0;
+}
+.form-group input[type="password"],
+.form-group input[type="text"] {
+	width: 100%;
+	padding: 15px;
+	border: 1px solid #dddddd;
+	margin-bottom: 15px;
+	box-sizing:border-box;
+}
+.form-group input[type="submit"] {
+	width: 100%;
+	padding: 15px;
+	background-color: #535b63;
+	border: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-weight: bold;
+	color: #ffffff;
+}
+.button {
+	width: 100%;
+	padding: 15px;
+	background-color: #535b63;
+	border: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-weight: bold;
+	color: #ffffff
+	}
+
+	label {
+        color: white
+    }
+
+</style>
+
+	<div class="row"> 
+			<div class="container"> 
+			 
+			<div class="item"> 
+			 
+			 <h1><span class="fa fa-sign-in"></span> Signup</h1> 
+			 
+			 
+			 <!-- LOGIN FORM --> 
+			 <form action="/register" method="post"> 
+			  <div class="form-group"> 
+			   <label>Username</label> 
+			   <input type="text" class="form-control" name="username"> 
+			  </div> 
+				<div class="form-group"> 
+			   <label>Email</label> 
+			   <input type="text" class="form-control" name="email"> 
+			  </div> 
+			  <div class="form-group"> 
+			   <label>Password</label> 
+			   <input type="password" class="form-control" name="password"> 
+			  </div> 
+			 
+			  <button type="submit" class="button">Signup</button> 
+			 </form> 
+			 
+			 <hr> 
+			 
+			 <p>Already have an account? <br><a href="/login" class="button">Login</a></p> 
+			 <p>Or go <br><a href="/" class="button">Home</a>.</p> 
+			 
+			</div> 
+			 
+			</div> 
+			  </div> 		
+
+

@@ -1,0 +1,85 @@
+<style> body {background-image: url("https://www.suspensiondesigner.com/wp-content/uploads/2018/12/background_cropped.jpeg")}</style>
+<style>
+.form-group {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+.item h1 {
+			text-align: center;
+			color: #d8d8d8;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+.form-group input[type="password"],
+.form-group input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+.form-group input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
+    .button {
+	width: 100%;
+	padding: 15px;
+	background-color: #535b63;
+	border: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-weight: bold;
+	color: #ffffff
+	}
+
+    label {
+        color: white
+    }
+
+		</style>
+<div class="row"> 
+        <div class="container"> 
+            <div class="item"> 
+                <h1><span class="fa fa-sign-in"></span> Login</h1> 
+     
+                <!-- show any messages that come back with authentication --> 
+                <% if (message.length > 0) { %> 
+                    <div class="alert alert-danger"><%= message %></div> 
+                <% } %> 
+     
+                <!-- LOGIN FORM --> 
+                <form action="/login" method="post"> 
+                    <div class="form-group"> 
+                        <label>Username</label> 
+                        <input type="text" class="form-control" name="username"> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label>Password</label> 
+                        <input type="password" class="form-control" name="password"> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label>Remember Me</label> 
+                        <input type="checkbox" class="form-control" name="remember" value="yes"> 
+                    </div> 
+     <br>
+                    <button type="submit" class="button">Login</button> 
+                   
+
+                </form> 
+     
+                <hr> 
+    
+                </div> 
+            </div> 
+        </div> 
+      </div> 
+      <p><a href="/register" class="button">Signup</a></p><br> 
+			 <p><a href="/" class="button">Home</a></p>

@@ -1,0 +1,53 @@
+<style> body {
+  background-image: url("https://www.suspensiondesigner.com/wp-content/uploads/2018/12/background_cropped.jpeg")
+  }
+  p {color:white}
+  h1 {color:white}
+  .button {
+	width: 100%;
+	padding: 15px;
+	background-color: #535b63;
+	border: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-weight: bold;
+	color: #ffffff
+	}</style>
+
+<div class="row"> 
+        <div class="container"> 
+         
+         <div class="item"> 
+          <h1><span class="fa fa-anchor"></span> Profile Page</h1> 
+           
+         </div> 
+         
+         <div class="row"> 
+         
+          <!-- LOCAL INFORMATION --> 
+          <div class="item"> 
+         
+            
+         
+             <p > 
+              <strong class="itemp">Id: </strong><%= user.Id %><br> 
+              <strong class="itemp">username: </strong><%= user.username %><br> 
+              <strong class="itemp">username: </strong><%= user.email %><br> 
+              <strong class="itemp">password: </strong><%= user.password %> <br>
+
+             </p> <br>
+            
+</script>
+
+
+             <br><br>
+             <a href="/kpi" class="button">Enter your KPI's here to create your pdf report</a> 
+
+         
+           <a href="/logout" class="button">Logout</a> 
+          </div> 
+         
+         </div> 
+         
+        </div> 
+          </div> 
