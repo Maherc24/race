@@ -34,7 +34,16 @@
 			color: #ffffff;
 		}
 
-
+        .button {
+	width: 100%;
+	padding: 15px;
+	background-color: #535b63;
+	border: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-weight: bold;
+	color: #ffffff
+	}
 		</style>
 	</head>
 	<body>
@@ -190,7 +199,7 @@
 		<div class="login-form">
                 <h1>PDF Report Generator</h1>
 
-			<h1>Enter your KPIs below</h1>
+			<h1>Enter your Suspension Hardpoints below</h1>
 			<form action="auth" method="POST">
                 <input type="text" name="username" placeholder="x,y,z" required>
                 <input type="text" name="username" placeholder="x,y,z" required>
@@ -199,7 +208,7 @@
 				<input type="text" name="username" placeholder="x,y,z" required>
 
 				<input type="password" name="password" placeholder="Password" required>
-				<input type="submit">
+				<a href="/index" class="button">Submit Hardpoints</a>
 			</form>
 		</div>
 	</body>

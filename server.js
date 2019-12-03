@@ -25,6 +25,8 @@ var flash = require('connect-flash');
   //},
   // The rest of your configuration
 //}, '/profile');
+var pdfGeneratorService = require('./pdfGenerationModule/pdfGeneratorService');
+//app.use(express.static(__dirname + '/public'));
 
 app.use(session({
 	secret: 'secret',
@@ -119,7 +121,7 @@ passport.use(
 	 user : req.user // get the user out of session and pass to template 
 	}); 
    }); 
-
+  // app.get('/');
   
    var connection = mysql.createConnection({
 	host     : 'sql2.freemysqlhosting.net',
@@ -130,6 +132,19 @@ passport.use(
 	port : 3306
 });
 
+app.get('/', (req, res) => {
+    res.sendFile('home.html', {
+        root: path.join(__dirname, './')})
+})
+app.get('/pdf', function (req, res) {
+	pdfGeneratorService();
+	res.send('/pdf');
+  });
+
+  app.get('/index', (req, res) => {
+    res.sendFile('public/index.html', {
+        root: path.join(__dirname, './')})
+})
 /*var connection = mysql.createConnection({
 	host     : 'localhost',
 	user     : 'root',

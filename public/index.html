@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<style> body {background-image: url("https://www.suspensiondesigner.com/wp-content/uploads/2018/12/background_cropped.jpeg")}</style>
+<style>h2 {
+  color: white
+}
+</style>
+<html>
+    
+    <input style="height: 30px; width: 200px;" type="button" value="Generate PDF" onclick="requestPDFGeneration();"/>
+    <h2>Generated PDF will be in <b>KPI Report Downloads</b></h2>
+  </div>
+
+  <script>
+    function requestPDFGeneration() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          alert('PDF request taken - check "output" directory');
+        }
+      };
+      xhttp.open("GET", "http://localhost:3000/pdf", true);
+      xhttp.send();
+    }
+  </script>
+</body>
+</html>
