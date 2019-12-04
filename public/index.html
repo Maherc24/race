@@ -9,8 +9,32 @@
     <input style="height: 30px; width: 200px;" type="button" value="Generate PDF" onclick="requestPDFGeneration();"/>
     <h2>Generated PDF will be in <b>KPI Report Downloads</b></h2>
   </div>
+  <div id="content">
+      <h3>Other PDF Download</h3>
+ 
+     <p>Quick Download Here</p>
+ </div>
+ <div id="editor"></div>
+ <button id="cmd">generate PDF</button>
 
+
+ </form>
+ <button><a href="/kpi" download="kpi.pdf">Download</a></button>
   <script>
+  
+  var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }};
+$('#cmd').click(function () {
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
+
     function requestPDFGeneration() {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {

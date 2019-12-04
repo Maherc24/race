@@ -28,6 +28,7 @@ var flash = require('connect-flash');
 var pdfGeneratorService = require('./pdfGenerationModule/pdfGeneratorService');
 //app.use(express.static(__dirname + '/public'));
 
+
 app.use(session({
 	secret: 'secret',
 	resave: true,
@@ -275,7 +276,9 @@ app.get('/', function(request, response) {
 	response.sendFile(path.join(__dirname + '/login.html'));
 });
 
-
+app.get('/kpi', function(request, response) {
+	response.sendFile(path.join(__dirname + '/kpi.pdf'));
+});
 app.get('/home', function(request, response) {
 	if (request.session.loggedin) {
 		//response.send('Welcome back, ' + request.session.username + '!');
